@@ -29,6 +29,11 @@ public class PedidosController {
 	private @Autowired UsuariosRepository usuariosRepository;
 	private @Autowired PedidosRepository pedidosRepository;
 	
+	@GetMapping
+	public void todos(Model model) {
+		model.addAttribute("pedidos", pedidosRepository.findAll());
+	}
+	
 	@GetMapping("nuevo")
 	public void pedirLoQueSea(Model model) {
 		// a los fines del ejercicio dejamos fijo el número del

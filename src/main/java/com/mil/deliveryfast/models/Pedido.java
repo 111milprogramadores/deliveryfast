@@ -242,6 +242,14 @@ public class Pedido {
 		}
 	}
 	
+	public String getDomicilioOrigen() {
+		return calleOrigen + " " + numeroCalleOrigen + ", " + ciudadOrigen;
+	}
+	
+	public String getDomicilioDestino() {
+		return calleDestino + " " + numeroCalleDestino + ", " + ciudadDestino;
+	}
+	
 	@Override
 	public String toString() {
 		return "Pedido #" + numero;

@@ -141,6 +141,7 @@
 				
 				// obtenemos el precio del servicio
 				let precioServicio = parseFloat($('#precioServicio').val());
+				console.log(precioServicio);
 				
 				// obtenemos el monto a abonar
 				let montoEntregado = parseFloat($('#montoEntregado').val());
@@ -148,7 +149,7 @@
 				// obtenemos el monto de comision
 				let comision = parseFloat($('#comision').html());
 				
-				if (precioServicio && montoEntregado) {
+				if (precioServicio >= 0 && montoEntregado >= 0) {
 					let totalPedido = precioServicio + comision;
 					
 					if (montoEntregado < totalPedido) {
